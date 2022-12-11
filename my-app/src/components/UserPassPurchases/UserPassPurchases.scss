@@ -1,0 +1,25 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/typography' as *;
+
+.user-purchases {
+    background-color: #83b6d1;
+    display: flex;
+    // align-content: space-around;
+    justify-content: space-evenly;
+    height: 10.5rem;
+
+    &__active-wrpr {
+        margin: 2rem;
+        width: 50%;
+        background-color: #f8bcbc;
+        font-weight: 700;
+        border: 1px solid #d36565;
+    }
+
+    &__used-wrpr {
+        margin: 2rem;
+        width: 50%;
+        background-color: #f8bcbc;
+    }
+}

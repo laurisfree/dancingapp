@@ -1,0 +1,63 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/typography' as *;
+
+.profile {
+    display: flex;
+    // justify-content: center;
+    align-items: center;
+    align-content: flex-start;
+    background-color: #1B4965;
+    height: 20vh;
+    gap: 1rem;
+    background-image: url(../../assets/background/background.png);
+    background-position: 50% 40%;
+    // object-fit: contain;
+    // object-fit: fill;
+    // object-position: 100% 10%;
+    // object-fit: scale-down;
+
+    &__wrpr-photo{
+        margin-left: 1rem;
+        // margin-right: 1rem;
+    }
+
+    &__photo{
+        width: 9.375rem;
+        border-radius: 10px;
+    }
+
+    &__wrpr-name{
+        // object-fit: fill;
+        display: flex;
+        // justify-content: center;
+        // align-items: center;
+        // align-content: center;
+        font-weight: 700;
+        // background-color: #f8bcbc;
+        width: 100%;
+        border-radius: 10px;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        // height: 125.742px;
+        // background-image: url(../../assets/background/background.png);
+    }
+    &__back-name{
+        // object-fit: cover;
+        // display: flex;
+        // justify-content: center;
+        // align-items: center;
+        // align-content: center;
+        // font-weight: 500;
+        // background-color: #f8bcbc;
+        // width: 100%;
+        // border-radius: 10px;
+        // margin-left: 1rem;
+        // margin-right: 1rem;
+        // height: 125.742px;
+    }
+
+    &__name{
+
+    }
+}

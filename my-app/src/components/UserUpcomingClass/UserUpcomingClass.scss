@@ -1,0 +1,114 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/typography' as *;
+
+.upcoming-header{
+
+        // display: flex;
+        // // flex-direction: column;
+        background-color:#83b6d1;
+        // // background-color: #545454;
+        // color: $text-color;
+        // font-weight: 600;
+        // // height: 1.5625rem;
+        // text-align: center;
+        // justify-content: center;
+        // align-items: center;
+        // margin-bottom: .5rem;
+        // margin-top: 1rem;
+        // letter-spacing: .0938rem;
+        // padding-top: 1rem;
+        // padding-bottom: 1rem;
+        // margin-bottom: 2rem;
+
+    &__text {
+        
+            display: flex;
+            // background-color: #ffbaba;
+            color: #1a1a1a;
+            font-weight: 600;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 0.5rem;
+            margin-top: 1rem;
+            letter-spacing: 0.0938rem;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+        }
+
+        &__mainwrpr {
+            background-color:#83b6d1;
+            margin-bottom: 2rem;
+
+        }
+}
+
+
+
+.upcoming {
+
+    display: flex;
+    justify-content: space-around;
+    // margin-right: .625rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    background-color:#83b6d1;
+    // border-bottom: solid 1px #d36565;
+    // border-top: solid 1px #d36565;
+    // padding-top: 1rem;
+    // padding-bottom: 1rem;
+    // height: 50px;
+
+    &__date-wrpr{
+        background-color: #ffbaba;
+        width: 60%;
+        font-weight: 500;
+        background: linear-gradient(#d36565, #ffbaba);
+
+    }
+
+    &__date {
+        // background-color: #d36565;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        // width: 100%;
+        // width: fit-content;
+    }
+
+    &__info-wrpr {
+        width: 40%;
+        border: solid 1px #d36565;
+        font-weight: 700;
+        // border-top: solid 1px #d36565;
+    }
+
+    &__info{
+        // background-color: #d36565;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        // width: fit-content;
+    
+    }
+
+    &__btn-wrpr {
+        background-color: #f8bcbc;
+        height: 50px;
+        display: flex;
+        flex-direction: column;
+        // align-items: center;
+        justify-content: center;
+        // width: 60%;
+    }
+
+    &__btn-cancel {
+        width: 80%;
+        align-self: center;
+        height: 1.5625rem;
+        background-color: #83b6d1;
+
+    }
+
+
+
+}
