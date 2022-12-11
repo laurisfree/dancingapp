@@ -1,30 +1,31 @@
 const Booking = require("../models/booking.model")
+const UserBookings = require("../models/userBooking.model")
+const mongoose = require("mongoose");
 
 exports.getAllSchedules = (req, res) => {
     
-
-// ]
-  // const myBooking = new Booking({
-  //   date: "10 December 2022",
-  //   time: "2022-12-11T11:30:00.000",
-  //   classType: "Tap Advanced",
-  //   teacher: "Mary Shellby",
-  // })
   Booking.find().then(response => {
     res.status(200).json(response) 
   }).catch(error => console.log(error))
 };
 
 
+exports.getUserBookings = (req, res) => {
+  UserBookings.find({ userId: mongoose.Types.ObjectId(req.user.id)}).populate('bookingId').then(response => {
+    if (response && response.length) {
+      response = response.map(element => element.bookingId)
+    }
+    res.status(200).json(response) 
+  }).catch(error => console.log(error))
+};
+
+
+
 exports.createUserBooking = (req, res) => {
-    
-    console.log(req.body)
-    const myBooking = new Booking({
-      date: req.body.date,
-      time: req.body.time,
-      classType: req.body.classType,
-      teacher: req.body.teacher,
-      userId: "test User"
+    console.log(req.user, req.body)
+    const myBooking = new UserBookings({
+      userId: mongoose.Types.ObjectId(req.user.id),
+      bookingId: mongoose.Types.ObjectId(req.body.bookingId)
     })
     myBooking.save().then((response) => {
       res.sendStatus(200)
