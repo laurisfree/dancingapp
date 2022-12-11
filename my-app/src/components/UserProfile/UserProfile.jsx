@@ -3,7 +3,8 @@ import avatar from '../../assets/avatar/avatar.png'
 import background from '../../assets/background/background.png'
 
 
-export default function UserProfile() {
+export default function UserProfile(props) {
+
   return (
     <>
     <div className='profile'>
@@ -12,8 +13,9 @@ export default function UserProfile() {
       </div>
       <div className='profile__wrpr-name'>
         {/* <img src={background} alt="" className='profile__back-name'/> */}
-        <p className='profile__name'>WELCOME FLORENCE</p>
+        <p className='profile__name'>WELCOME {props.user?.name}</p>
       </div>
+      <div><button onClick={props.handleLogout}>Log out</button></div>
     </div>
     </>
 

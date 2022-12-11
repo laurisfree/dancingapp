@@ -13,11 +13,14 @@ export default function UserUpcomingClass(props) {
   // console.log(location.state)
 
   useEffect(() => {
-    axios.get('http://localhost:8080/booking')
+    const jwtToken = localStorage.getItem('jwt_token');
+    axios.get('http://localhost:8080/booking/userbookings',{
+      headers: {
+        Authorization: `Bearer ${jwtToken}`,
+      },
+    })
     .then(data => {
-      console.log(data.data)
-      const filteredData = data.data.filter( element => element.userId && element.userId === "test User" );
-      setBookingData(filteredData)
+      setBookingData(data.data)
     })
     .catch(error => console.log(error));
   }, [])

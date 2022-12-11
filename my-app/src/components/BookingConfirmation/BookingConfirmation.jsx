@@ -11,7 +11,13 @@ export default function BookingConfirmation() {
   console.log(location.state)
 
   const onConfirmHanlder = () => {
-    axios.post('http://localhost:8080/booking', {teacher: data.teacher, classType: data.classType, date: data.date, time: data.time})
+    const jwtToken = localStorage.getItem('jwt_token');
+    axios
+    .post('http://localhost:8080/booking', { bookingId: data._id },{
+      headers: {
+        Authorization: `Bearer ${jwtToken}`,
+      },
+    })
     .then(data => navigate("/"))
     .catch(error => console.log(error));
   }

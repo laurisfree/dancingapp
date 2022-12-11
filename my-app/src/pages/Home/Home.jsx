@@ -9,7 +9,7 @@ export default function Home (props){
         <>
         
         <Header />
-        <UserProfile />
+        <UserProfile handleLogout={props.handleLogout} user={props.user}/>
         <UserUpcomingClass />
         <UserPassPurchases activePasses={props.activePasses} />
         
