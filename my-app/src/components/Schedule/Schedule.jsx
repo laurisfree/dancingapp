@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react'
 import {Link} from 'react-router-dom'
 // import { bookingData } from '../../data/data';
-import { TextField } from '@mui/material';
 import axios from 'axios';
 import moment from 'moment'
 
@@ -21,7 +20,6 @@ export default function Schedule() {
   return (
     <>
       <div>
-        <TextField type="date" name="anydate"></TextField>
         {/* <div>When would you be dancing</div> */}
         {bookingData.map((item)=>(
         <div className='schedule'>
