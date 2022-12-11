@@ -2,6 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const app = express();
 const bookingRoutes = require('./routes/booking')
+const userRoutes = require('./routes/users')
 require('dotenv').config()
 
 // JOT TOKEN
@@ -33,6 +34,7 @@ app.use(( req, res, next )=>{
 })
 
 app.use('/booking',bookingRoutes)
+app.use('/user',userRoutes)
 
 app.listen(PORT, function () {
 	console.log(`server running at http://localhost:${PORT}`);
