@@ -5,7 +5,7 @@ const Users = require("../models/user.model");
 
 exports.getAllSchedules = (req, res) => {
     
-  Booking.find().then(response => {
+  Booking.find().sort({ date: -1 }).then(response => {
     res.status(200).json(response) 
   }).catch(error => console.log(error))
 };
