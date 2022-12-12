@@ -1,6 +1,7 @@
 const Booking = require("../models/booking.model")
 const UserBookings = require("../models/userBooking.model")
 const mongoose = require("mongoose");
+const Users = require("../models/user.model");
 
 exports.getAllSchedules = (req, res) => {
     
@@ -21,16 +22,23 @@ exports.getUserBookings = (req, res) => {
 
 
 
-exports.createUserBooking = (req, res) => {
-    console.log(req.user, req.body)
+exports.createUserBooking = async (req, res) => {
+  try {
+
+    const {passesBought, passesUsed} = await Users.findOne({ _id: mongoose.Types.ObjectId(req.user.id)});
+    if(passesBought - passesUsed < 1) throw new Error('error')
+    await Users.updateOne({ _id: mongoose.Types.ObjectId(req.user.id) }, { $inc: { passesUsed: 1 } })
+
     const myBooking = new UserBookings({
       userId: mongoose.Types.ObjectId(req.user.id),
       bookingId: mongoose.Types.ObjectId(req.body.bookingId)
     })
-    myBooking.save().then((response) => {
-      res.sendStatus(200)
-    }).catch(error => { console.log(error); res.sendStatus(500)})
-  };
+    await myBooking.save()
+    res.sendStatus(200)
+  } catch (error) {
+    res.sendStatus(500)
+  } 
+};
 
 
 
