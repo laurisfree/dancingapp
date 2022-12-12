@@ -103,7 +103,7 @@ export default function App() {
           <Route path='/book' element={loggedIn ? <Book />: <Navigate to="/login"/> } />
           <Route path='/book/info' element={loggedIn ? <BookInfo />: <Navigate to="/login"/>} />
           <Route path='/book/confirmation' element={loggedIn ? <BookingConfirmation />: <Navigate to="/login"/>} />
-          <Route path='/buy' element={loggedIn ? <Buy setActivePasses={setActivePasses} />: <Navigate to="/login"/>} />
+          <Route path='/buy' element={loggedIn ? <Buy setActivePasses={setActivePasses} loadProfile={loadProfile} />: <Navigate to="/login"/>} />
           <Route path='/dancer' element={loggedIn ? <Dancer />: <Navigate to="/login"/>}/> 
         {/* </Routes> : 
         <Routes> */}

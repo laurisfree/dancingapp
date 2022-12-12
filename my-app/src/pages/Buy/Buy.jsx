@@ -7,7 +7,7 @@ export default function Buy(props) {
         <>
         
         <Header />
-        <BuyPassess setActivePasses={props.setActivePasses} />
+        <BuyPassess setActivePasses={props.setActivePasses} loadProfile={props.loadProfile}/>
         
         
         </>

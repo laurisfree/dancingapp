@@ -11,7 +11,7 @@ export default function Home (props){
         <Header />
         <UserProfile handleLogout={props.handleLogout} user={props.user}/>
         <UserUpcomingClass />
-        <UserPassPurchases activePasses={props.activePasses} />
+        <UserPassPurchases activePasses={props.activePasses} user={props.user}/>
         
         
         </>
