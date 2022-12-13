@@ -1,1 +1,40 @@
-r
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/typography' as *;
+
+
+.login {
+    // background-color: aqua;
+    // height: 31.25rem;
+    // display: flex;
+    // flex-direction: column;
+
+    &__logo {
+
+        height: 30vh;
+        align-items: center;
+
+    }
+    
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        // width: 50%;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+        // margin-bottom: 2rem;
+    }
+
+    &__input{
+        height: 3.125rem;
+        width: 60%;
+        padding-left: 1rem;
+    }
+
+    &__btn {
+        height: 3.125rem;
+        width: 60%;
+    }
+}
