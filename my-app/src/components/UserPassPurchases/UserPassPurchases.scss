@@ -3,23 +3,33 @@
 @use '../../styles/partials/typography' as *;
 
 .user-purchases {
-    background-color: #83b6d1;
+    background-color: #223843;
     display: flex;
     // align-content: space-around;
-    justify-content: space-evenly;
-    height: 10.5rem;
+    justify-content: space-between;
+    height: 9rem;
 
     &__active-wrpr {
         margin: 2rem;
         width: 50%;
-        background-color: #f8bcbc;
+        background-color: #8bd3dd;
         font-weight: 700;
-        border: 1px solid #d36565;
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        justify-content: center;
+        border-radius: .25rem;
     }
 
     &__used-wrpr {
         margin: 2rem;
         width: 50%;
-        background-color: #f8bcbc;
+        background-color: #F7C3C4;
+        font-weight: 400;
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        justify-content: center;
+        border-radius: .25rem;
     }
 }

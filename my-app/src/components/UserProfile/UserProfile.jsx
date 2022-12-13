@@ -13,7 +13,7 @@ export default function UserProfile(props) {
       </div> */}
       <div className='profile__wrpr-name'>
         {/* <img src={background} alt="" className='profile__back-name'/> */}
-        <p className='profile__name'>Welcome {props.user?.name}</p>
+        <p className='profile__name'>WELCOME {props.user?.name}</p>
       </div>
       <div className='profile__btn-wrpr'><button onClick={props.handleLogout} className="profile__btn">SIGN OUT</button></div>
     </div>

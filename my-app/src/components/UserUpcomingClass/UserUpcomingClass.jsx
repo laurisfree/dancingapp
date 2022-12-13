@@ -70,9 +70,9 @@ export default function UserUpcomingClass(props) {
             <div className='upcoming__info'>MARY SHELLBY</div>
           </div>
         </div> */}
-        <div className='upcoming__btn-wrpr'>
-          <button className='upcoming__btn-cancel'>CANCEL</button>
-        </div>
+        {/* <div className='upcoming__btn-wrpr'> */}
+          {/* <button className='upcoming__btn-cancel'>CANCEL</button> */}
+        {/* </div> */}
       </div>
     </>
 

@@ -8,9 +8,11 @@
     &__day-wrpr {
         display: flex;
         // flex-direction: column;
-        background-color: $btn-pink1;
+        // background-color: $btn-pink1;
+        background-color:#223843;
         // background-color: #545454;
-        color: $text-color;
+        // color: $text-color;
+        color: #8bd3dd;
         font-weight: 600;
         // height: 1.5625rem;
         text-align: center;
@@ -21,6 +23,7 @@
         letter-spacing: .0938rem;
         padding-top: 1rem;
         padding-bottom: 1rem;
+        text-transform: uppercase;
     }
 
     &__info-wrpr{
@@ -28,23 +31,26 @@
         display: flex;
         align-items: center;
         justify-content: space-around;
-        border-bottom: solid 1px #d36565;
-        border-top: solid 1px #d36565;
+        border-bottom: solid 1px #F7C3C4;
+        border-top: solid 1px #F7C3C4;
         padding-top: 1rem;
         padding-bottom: 1rem;
+        text-transform: uppercase;
     }
 
     &__btn {
-        height: 2rem;
-        // width: 10%;
-        justify-content: center;
-        align-items: center;
-        align-content: center;
-        display: flex;
-        border-radius: .25rem;
-        background-image: linear-gradient( #d36565,#ffbaba,#fbbbbb, #d36565,);
-        text-align: center;
-        font-size: .8125rem;
+        height: 3.125rem;
+        // width: 50%;
+        background-color: #8bd3dd;
+        border: none;
+        // margin-top: 5rem;
+        width: 100%;
+        color: #223843;
+        font-weight: 500;
+        border-radius: 0.25rem;
+        height: 2.5rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
     }
 
 }
