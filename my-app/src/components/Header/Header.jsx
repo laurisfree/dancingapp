@@ -26,11 +26,11 @@ export default function Header() {
                             <li className="header-main__nav-li">BUY</li>
                         </Link>
                     </div>
-                    <div className="header-main__nav">
+                    {/* <div className="header-main__nav">
                         <Link to="/dancer">
                             <li className="header-main__nav-li">DANCER</li>
                         </Link>
-                    </div>ç
+                    </div> */}
 
                 </div>
             </div>

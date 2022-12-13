@@ -64,7 +64,7 @@
         background-color: #ffbaba;
         width: 60%;
         font-weight: 500;
-        background: linear-gradient(#d36565, #ffbaba);
+        background: linear-gradient(#ffbaba, #df9191 );
 
     }
 
@@ -102,9 +102,10 @@
     }
 
     &__btn-cancel {
-        width: 80%;
+        // width: 80%;
+        padding: 0.625rem;
         align-self: center;
-        height: 1.5625rem;
+        // height: 1.5625rem;
         background-color: #83b6d1;
 
     }

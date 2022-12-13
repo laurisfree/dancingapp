@@ -19,8 +19,11 @@ export default function UserUpcomingClass(props) {
         Authorization: `Bearer ${jwtToken}`,
       },
     })
-    .then(data => {
-      setBookingData(data.data)
+    .then(response => {
+
+      response.data.sort((a, b)=> new Date(b.date) - new Date(a.date) )
+
+      setBookingData(response.data)
     })
     .catch(error => console.log(error));
   }, [])
