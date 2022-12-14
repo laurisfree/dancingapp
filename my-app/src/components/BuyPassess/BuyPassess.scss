@@ -3,13 +3,7 @@
 @use '../../styles/partials/typography' as *;
 
 .buy-p {
-    // display: flex;
-    // flex-direction: column;
-    // align-items: flex-start;
-    // justify-content: flex-start;
-    // background-color:#223843;
-    // align-content: space-between;
-    // width: 100%;
+
     height: 50vh;
 
     &__header{
@@ -79,15 +73,22 @@
         margin-top: 1.5rem;
     }
 
+    &__input{
+        cursor: pointer;
+        accent-color: #8bd3dd;
+        width: 1.3rem;
+        height: 1.3rem;
+    }
+
 }
 
-input[type="radio"],
-{
-    width: 1.5rem;
-    height: 1.5rem;
+// input[type="radio"],
+// {
+//     width: 1.5rem;
+//     height: 1.5rem;
     // accent-color: #F7C3C4;
     // color: #F7C3C4;
-}
+// }
 
 
 
