@@ -124,8 +124,10 @@ const TimeSchedule = ({item}) => (
   <div >{moment(item.time).format('h:mm')}</div>
   <div>{item.classType}</div>
   <div>{item.teacher}</div>
-  <Link to="/book/info"><button className='schedule__btn'>+</button></Link>
+  <div className='schedule-btns-wrpr'>
+  <Link to="/book/info"><button className='schedule__btn-2'>+</button></Link>
   <Link to="/book/confirmation" state={{data:item}}><button className='schedule__btn'>BOOK</button></Link>
+  </div>
   </div>
 )
 
