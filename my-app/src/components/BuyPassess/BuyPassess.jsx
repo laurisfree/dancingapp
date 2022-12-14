@@ -23,26 +23,30 @@ export default function BuyPassess(props) {
 
   return (
     <>
-      <h2>Purchase Passess for the studio</h2>
+    <div className='buy-p'>
+      <div className='buy-p__header'>
+      <p className='buy-p__header-text'>Purchase Passess for the studio</p>
+      </div>
       {/* <form className='buy-p'> */}
         <div className='buy-p__btn-wrpr'>
-          <input type="radio" id="5-passess" name="passess" value="5" onChange={(e)=>setValue(e.target.value)}/>
-          <label for="">5 Passess. 1.5 hour class. $100 CND</label>
+          <input className='buy-p__input' type="radio" id="5-passess" name="passess" value="5" onChange={(e)=>setValue(e.target.value)}/>
+          <label for="5"> 5 PASSESS OF 1.5 HOUR CLASS. $100 CND</label>
         {/* <br /> */}
         </div>
         <div className='buy-p__btn-wrpr'>
           {/* <div className='buy-p__input-wrpr'> */}
-            <input type="radio" id="10-passess" name="passess" value="10" onChange={(e)=>setValue(e.target.value)}/>
+            <input className='buy-p__input' type="radio" id="10-passess" name="passess" value="10" onChange={(e)=>setValue(e.target.value)}/>
           {/* </div> */}
           {/* <div className='buy-p__label-wrpr'> */}
-            <label for="javascript">10 Passess. 1.5 hour class. $200 CND</label>
+            <label for="10"> 10 PASSESS OF 1.5 HOUR CLASS. $200 CND</label>
          {/* </div> */}
         </div>
         <div className='buy-p__total'>
-          <p>You are going to purschase ....</p>
-        <button onClick={onSubmitHandler}>CONFIRM</button>
+          {/* <p>You are going to purschase ....</p> */}
+        <button className='buy-p__btn-confirm' onClick={onSubmitHandler}>CONFIRM</button>
       </div>
       {/* </form> */}
+      </div>
     </>
   );
 }
