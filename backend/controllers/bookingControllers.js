@@ -5,14 +5,14 @@ const Users = require("../models/user.model");
 
 exports.getAllSchedules = (req, res) => {
     
-  Booking.find().sort({ date: -1 }).then(response => {
+  Booking.find().sort({ date: 1 }).then(response => {
     res.status(200).json(response) 
   }).catch(error => console.log(error))
 };
 
 
 exports.getUserBookings = (req, res) => {
-  UserBookings.find({ userId: mongoose.Types.ObjectId(req.user.id)}).populate('bookingId').then(response => {
+  UserBookings.find({ userId: mongoose.Types.ObjectId(req.user.id)}).populate({path: 'bookingId', options: { sort : [{'date': 'desc' }]}}).then(response => {
     if (response && response.length) {
       response = response.map(element => element.bookingId)
     }
