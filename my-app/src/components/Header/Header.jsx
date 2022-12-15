@@ -8,7 +8,9 @@ export default function Header() {
 		<>
             <div className="header-main">
                 <div className="header-main__img-wrp">
+                    <Link to="/">
                     <img src={logo} alt="" className='header-main__img'/>
+                    </Link>
                 </div>
                 <div className='header-main__wrp-nav'>
                     <div className="header-main__nav">
@@ -26,11 +28,11 @@ export default function Header() {
                             <li className="header-main__nav-li">BUY</li>
                         </Link>
                     </div>
-                    {/* <div className="header-main__nav">
+                    <div className="header-main__nav">
                         <Link to="/dancer">
                             <li className="header-main__nav-li">DANCER</li>
                         </Link>
-                    </div> */}
+                    </div>
 
                 </div>
             </div>

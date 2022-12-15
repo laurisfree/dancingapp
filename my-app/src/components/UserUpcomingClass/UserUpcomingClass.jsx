@@ -53,13 +53,14 @@ export default function UserUpcomingClass(props) {
                               <div className='upcoming__date'>{moment(item.date).format('dddd MMMM Do YYYY')}</div>
                               {/* <div className='upcoming__hour-wrpr'> */}
                               <div className='upcoming__time'> 
-                                <p>⌚</p>
+                                {/* <p>@</p> */}
                                {moment(item.time).format('h:mm')}</div>
                               {/* </div> */}
                             </div>
                             <div className='upcoming__info-wrpr'>
                               <div className='upcoming__info'>{item.classType}</div>
                               <div className='upcoming__info'>{item.teacher}</div>
+                              <button className='upcoming__cancel-btn'>CANCEL</button>
                             </div>
                           </div>
                               ))}

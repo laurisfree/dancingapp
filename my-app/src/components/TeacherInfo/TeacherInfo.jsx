@@ -18,13 +18,11 @@ export default function TeacherInfo() {
             <div>
             <Link to="/book"><button className='class-info__btn'>BACK</button></Link>
             </div>
-            <p> 🩰 BALLET ADVANCED</p>
+            <p>BALLET ADVANCED</p>
           </div>
           <div className='class-info__text-wrpr'>
             <p>CHALLENGING CLASS FOR PEOPLE YOU HAVE BEEN PRACTISING BALLET FOR MORE THAN 3 YEARS. 
             BARRE, CENTER. LIVE PIANO WHEN AVAILABLE.</p>
-            {/* <p>Challenging class for people who have been practising Ballet for more than 3 years. 
-              Barre and center. Live Piano when available. </p> */}
           </div>
           <div className='class-info__gallery'>
             {/* <span> */}

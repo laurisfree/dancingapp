@@ -3,6 +3,8 @@ import Header from '../../components/Header/Header';
 import UserUpcomingClass from '../../components/UserUpcomingClass/UserUpcomingClass';
 import UserProfile from '../../components/UserProfile/UserProfile';
 import UserPassPurchases from '../../components/UserPassPurchases/UserPassPurchases';
+import Footer from '../../components/Footer/Footer';
+
 
 export default function Home (props){
     return (
@@ -12,6 +14,7 @@ export default function Home (props){
         <UserProfile handleLogout={props.handleLogout} user={props.user}/>
         <UserUpcomingClass />
         <UserPassPurchases activePasses={props.activePasses} user={props.user}/>
+        <Footer />
         
         
         </>

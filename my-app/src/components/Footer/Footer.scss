@@ -1,3 +1,19 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/typography" as *;
+
+.footer-wrpr {
+    background-color: #8bd3dd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    margin-top: 1rem;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    border-top: solid 2px #223843;
+
+    &__icon{
+        height: 2rem;
+    }
+}
