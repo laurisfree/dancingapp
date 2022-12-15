@@ -16,9 +16,9 @@ export default function TeacherInfo() {
         <div className='class-info'>
           <div className='class-info__main-wrpr'>
             <div>
-            <Link to="/book"><button>BACK</button></Link>
+            <Link to="/book"><button className='class-info__btn'>BACK</button></Link>
             </div>
-            <p>ADV. BALLET</p>
+            <p> 🩰 BALLET ADVANCED</p>
           </div>
           <div className='class-info__text-wrpr'>
             <p>CHALLENGING CLASS FOR PEOPLE YOU HAVE BEEN PRACTISING BALLET FOR MORE THAN 3 YEARS. 
@@ -27,10 +27,14 @@ export default function TeacherInfo() {
               Barre and center. Live Piano when available. </p> */}
           </div>
           <div className='class-info__gallery'>
+            {/* <span> */}
             <img src={imgclass1} alt="" className='class-info__gallery-img' />
             <img src={imgclass2} alt="" className='class-info__gallery-img' />
+            {/* </span> */}
+            {/* <span> */}
             <img src={imgclass3} alt="" className='class-info__gallery-img' />
             <img src={imgclass4} alt="" className='class-info__gallery-img' />
+            {/* </span> */}
           </div>
         </div>
         {/* Info of the teacher */}
