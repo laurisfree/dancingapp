@@ -2,7 +2,7 @@ import React, {useEffect} from 'react'
 import { useNavigate } from 'react-router-dom'
 import logo from '../../assets/logo/logo-dance-studio.png'
 import './Login.scss';
-import video from '../../assets/video/Dancing.mp4'
+
 
 
 
@@ -23,13 +23,7 @@ const Login = (props) => {
   return (
     <>
     <div className='login'>
-    {/* <video width="100%" height="100%"  preload='auto'>
-      <source src={video} type="video/mp4" />
-    </video> */}
       <div>
-      {/* <video preload='auto' className="login__video">
-        <source src={video} type="video/mp4" />
-      </video> */}
       </div>
       <img src={logo} alt="dance app logo" className="login__logo" />
       {/* <h2></h2> */}

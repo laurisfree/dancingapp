@@ -31,6 +31,11 @@
         &__mainwrpr {
             // background-color:#223843;
             margin-bottom: 1rem;
+            // border-right: #223843 1px solid;
+            // border-left: #223843 1px solid;
+            // width: 80%;
+            // align-items: center;
+            // justify-content: center;
 
         }
 }
@@ -46,30 +51,78 @@
     margin-bottom: 1rem;
     background-color:#8bd3dd;
     text-transform: uppercase;
+    align-items: center;
+    // align-content: center;
+    // flex-direction: column-reverse;
+    // width: 90%;
+
+    @include tablet {
+        margin-right: 2rem;
+        margin-left: 2rem;
+    }
+
 
     &__date-wrpr{
         background-color: #F7C3C4;
         width: 60%;
-        font-weight: 400;
-        // background: linear-gradient(#ffbaba, #df9191 );
+        align-items: center;
 
+        @include tablet {
+        background-color: #F7C3C4;
+        width: 60%;
+        font-weight: 400;
+        display: flex;
+        gap: 1rem;
+        justify-content: center;    
+        }
     }
 
     &__date {
-        // background-color: #d36565;
-        // padding-top: 1rem;
-        // padding-bottom: 1rem;
-        // width: 100%;
-        // width: fit-content;
         padding-top: .5rem;
-        padding-bottom: .5rem;
+        // padding-bottom: .5rem;
+        font-weight: 500;
+
+        @include tablet {
+            padding-bottom: .5rem;
+        }
+    }
+
+    &__time {
+        // padding-top: .5rem;
+        // padding-bottom: .5rem;
+        // font-weight: 500;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: .5rem;
+
+        @include tablet {
+            padding-top: .5rem;
+            padding-bottom: .5rem;
+            // font-weight: 500;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: .5rem;
+        }
     }
 
     &__info-wrpr {
         width: 40%;
+
+        @include tablet {
+        width: 40%;
         // border: solid 1px #d36565;
         font-weight: 400;
         // border-top: solid 1px #d36565;
+        display: flex;
+        gap: 2rem;
+        justify-content: center;
+        // flex-direction: row-reverse;
+        // font-size: small;
+        box-sizing: border-box;
+        // overflow: none;
+     }
     }
 
     &__info{
