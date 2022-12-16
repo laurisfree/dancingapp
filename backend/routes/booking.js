@@ -1,4 +1,3 @@
-
 const express = require("express");
 const router = express.Router();
 const bookingController = require("../controllers/bookingControllers");
@@ -12,5 +11,6 @@ router
 router
   .route("/userbookings")
   .get(checkToken, bookingController.getUserBookings)
+  .delete(checkToken, bookingController.deleteUserBooking)
 
 module.exports = router;
