@@ -7,12 +7,11 @@ import moment from 'moment'
 export default function UserUpcomingClass(props) {
   const [bookingData, setBookingData] = useState([]);
 
-  // const location = useLocation()
-  // const { data } = location.state
-
-  // console.log(location.state)
-
   useEffect(() => {
+    getUserClasses();
+  }, [])
+
+  const getUserClasses = () => {
     const jwtToken = localStorage.getItem('jwt_token');
     axios.get('http://localhost:8080/booking/userbookings',{
       headers: {
@@ -26,8 +25,23 @@ export default function UserUpcomingClass(props) {
       setBookingData(response.data)
     })
     .catch(error => console.log(error));
-  }, [])
+  }
 
+  const onCancelClass = (id) => {
+    console.log(id);
+    const jwtToken = localStorage.getItem('jwt_token');
+    axios.delete(`http://localhost:8080/booking/userbookings?id=${id}`,{
+      headers: {
+        Authorization: `Bearer ${jwtToken}`,
+      },
+    })
+    .then(response => {
+      getUserClasses()
+    })
+    .catch(error => console.log(error));
+  }
+
+  
   return (
     <>
       <div className='upcoming-header__mainwrpr'>
@@ -36,18 +50,6 @@ export default function UserUpcomingClass(props) {
         </div>
         
                   {bookingData.map((item)=>(
-                    // <div className='schedule'>
-                    //           <div className='schedule__day-wrpr'>
-                    //           <div>{moment(item.date).format('dddd MMMM Do YYYY')}</div>
-                    //         </div>
-                    //         <div className='schedule__info-wrpr'>
-                    //           <div >{moment(item.time).format('h:mm')}</div>
-                    //           <div>{item.classType}</div>
-                    //           <div>{item.teacher}</div>
-                    //           <Link to="/book/info"><button className='schedule__btn'>+</button></Link>
-                    //           <Link to="/book/confirmation" state={{data:item}}><button className='schedule__btn'>BOOK</button></Link>
-                    //         </div>
-                    // </div>
                             <div className='upcoming'>
                             <div className='upcoming__date-wrpr'>
                               <div className='upcoming__date'>{moment(item.date).format('dddd MMMM Do YYYY')}</div>
@@ -60,24 +62,10 @@ export default function UserUpcomingClass(props) {
                             <div className='upcoming__info-wrpr'>
                               <div className='upcoming__info'>{item.classType}</div>
                               <div className='upcoming__info'>{item.teacher}</div>
-                              <button className='upcoming__cancel-btn'>CANCEL</button>
+                              <button className='upcoming__cancel-btn' onClick={() => onCancelClass(item._id)}>CANCEL</button>
                             </div>
                           </div>
                               ))}
-
-        {/* <div className='upcoming'>
-          <div className='upcoming__date-wrpr'>
-            <div className='upcoming__date'>THURSDAY 01 DEC</div>
-            <div className='upcoming__date'>10:00 PST</div>
-          </div>
-          <div className='upcoming__info-wrpr'>
-            <div className='upcoming__info'>ADV. BALLET</div>
-            <div className='upcoming__info'>MARY SHELLBY</div>
-          </div>
-        </div> */}
-        {/* <div className='upcoming__btn-wrpr'> */}
-          {/* <button className='upcoming__btn-cancel'>CANCEL</button> */}
-        {/* </div> */}
       </div>
     </>
 
