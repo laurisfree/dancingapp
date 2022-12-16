@@ -1,0 +1,11 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/typography" as *;
+
+
+.comments {
+    background-color: #8bd3dd;
+    // background-color: #223843;
+    // color: #8bd3dd;
+    color: #223843;
+}

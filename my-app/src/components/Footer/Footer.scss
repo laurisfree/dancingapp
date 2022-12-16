@@ -12,6 +12,9 @@
     padding-top: .5rem;
     padding-bottom: .5rem;
     border-top: solid 2px #223843;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 
     &__icon{
         height: 2rem;
