@@ -49,14 +49,14 @@ export default function UserUpcomingClass(props) {
           <p className='upcoming-header__text'>YOUR UPCOMING CLASSES</p>
         </div>
         
-                  {bookingData.map((item)=>(
-                            <div className='upcoming'>
+                  {bookingData.map((item, index)=>(
+                            <div className='upcoming' key={index}>
                             <div className='upcoming__date-wrpr'>
                               <div className='upcoming__date'>{moment(item.date).format('dddd MMMM Do YYYY')}</div>
                               {/* <div className='upcoming__hour-wrpr'> */}
                               <div className='upcoming__time'> 
                                 {/* <p>@</p> */}
-                               {moment(item.time).format('h:mm')}</div>
+                                {moment(item.time).format('h:mm')}</div>
                               {/* </div> */}
                             </div>
                             <div className='upcoming__info-wrpr'>

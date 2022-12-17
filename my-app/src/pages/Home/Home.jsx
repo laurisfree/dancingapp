@@ -15,8 +15,6 @@ export default function Home (props){
         <UserUpcomingClass />
         <UserPassPurchases activePasses={props.activePasses} user={props.user}/>
         <Footer />
-        
-        
         </>
     )
 }

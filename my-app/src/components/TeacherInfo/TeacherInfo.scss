@@ -7,9 +7,7 @@
     &__main-wrpr {
 
         display: flex;
-        // justify-content: space-around;
         background-color: #223843;
-        // color: #8bd3dd;
         color:  #F7C3C4;
         font-weight: 600;
         text-align: center;
@@ -20,17 +18,11 @@
         margin-top: 1rem;
         letter-spacing: .0938rem;
         gap: 24px;
-        // padding-top: 1rem;
-        // padding-bottom: 1rem;
     }
 
     &__btn {
-        // height: 2rem;
-        // width: 50%;
         background-color: #8bd3dd;
         border: none;
-        // margin-top: 5rem;
-        // width: 100%;
         color: #223843;
         font-weight: 500;
         border-radius: 0.25rem;
@@ -41,17 +33,11 @@
 
     &__text-wrpr {
         display: flex;
-        // flex-direction: column;
-        // align-items: center;
-        // justify-content: center;
-        // justify-items: center;
         margin: 1rem; 
-        // width: 80%;
 
         @include tablet {
             margin-right: 3rem;
             margin-left: 3rem;
-            // flex-direction: column;
         }
     }
 
@@ -59,31 +45,21 @@
         display: flex;
         width: 100%;
         justify-content: space-around;
-        // flex-wrap: nowrap;
         flex-direction: column;
         align-items: center;
-        // margin-right: 5rem;
-        // margin-left: 5rem;
-        // flex-direction: column;
-        // width: 10%;
 
         @include tablet {
-           flex-direction: row;
-        //    flex-wrap: wrap;
-
+            flex-direction: row;
         }
     }
 
     &__gallery-img{
         display: flex;
-        // object-fit: contain;
         width: 100%;
-        // margin-top: 1rem;
         margin-bottom: 1rem;
 
         @include tablet {
             width: 20%;
-            // flex-wrap: wrap;
         }
     }
 }
@@ -106,8 +82,6 @@
         letter-spacing: .0938rem;
         align-items: flex-start;
         padding-left: 1.5rem;
-        // padding-top: 1rem;
-        // padding-bottom: 1rem;
     }
 
     &__text-wrpr {
@@ -123,20 +97,19 @@
         width: 100%;
         justify-content: space-around;
         flex-direction: column;
-     
+
         @include tablet {
             flex-direction: row;
-         }
+        }
     }
 
     &__gallery-img{
         display: flex;
-        // object-fit: contain;
         width: 100%;
         margin-bottom: 1rem;
+        
         @include tablet {
             width: 20%;
-            // flex-wrap: wrap;
         }
     }
 

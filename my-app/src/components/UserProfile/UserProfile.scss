@@ -3,8 +3,6 @@
 @use '../../styles/partials/typography' as *;
 
 .profile {
-    // margin-left: 1rem;
-    // margin-right: 1rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -12,12 +10,10 @@
     align-content: flex-start;
     background-color: #1B4965;
     height: 30vh;
-    // gap: .5rem;
     background-image: url(../../assets/background/header-background.png);
     background-position: 50% 50%;
     background-size: cover;
     align-items: flex-start;
-    // margin-left: 1rem;
 
     &__name {
         font-weight: 300;
@@ -29,7 +25,6 @@
 
     &__wrpr-photo{
         margin-left: .5rem;
-        // margin-right: 1rem;
     }
 
     &__photo{
@@ -39,39 +34,15 @@
 
     &__wrpr-name{
         margin-left: 1rem;
-        // object-fit: fill;
         display: flex;
-        // justify-content: center;
-        // align-items: center;
-        // align-content: center;
         font-weight: 700;
-        // background-color: #f8bcbc;
-        // width: 100%;
         justify-content: flex-start;
         border-radius: 10px;
-        // font-size: 3.125rem;
-        // text-decoration-style: wavy;
-        // margin-left: 1rem;
-        // margin-right: 1rem;
-        // height: 125.742px;
-        // background-image: url(../../assets/background/background.png);
     }
 
     &__back-name{
         display: flex;
         flex-direction: column;
-        // object-fit: cover;
-        // display: flex;
-        // justify-content: center;
-        // align-items: center;
-        // align-content: center;
-        // font-weight: 500;
-        // background-color: #f8bcbc;
-        // width: 100%;
-        // border-radius: 10px;
-        // margin-left: 1rem;
-        // margin-right: 1rem;
-        // height: 125.742px;
     }
 
     &__btn-wrpr {
@@ -80,23 +51,16 @@
         height: 2.5rem;
         width: 21%;
         margin-left: 1rem;
-        // align-self: flex-end;
     }
 
     &__btn{
         height: 3.125rem;
-        // width: 50%;
         background-color: #8bd3dd;
         border: none;
-        // margin-top: 5rem;
         width: 100%;
         color: #223843;
         font-weight: 500;
         border-radius: 0.25rem;
         height: 2.5rem;
-        // width: 100%;
-        // align-self: flex-end;
-        // margin-right: 10rem;
-
     }
 }

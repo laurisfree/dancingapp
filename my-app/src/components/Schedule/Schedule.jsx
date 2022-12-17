@@ -24,12 +24,42 @@ export default function Schedule() {
       console.log(groupBy(mappedData,'date'))
       setBookingData(groupBy(mappedData,'date'));
     }).catch(error => console.log(error))
- 
 
   }, [])
   
-
   {
+
+  return (
+    <>
+      <div>
+        {/* <div>When would you be dancing</div> */}
+        {Object.keys(bookingData).map((item, index )=>(
+        <div className='schedule' key={index}>
+          <div className='schedule__day-wrpr'>
+          <div>{moment(item).format('dddd MMMM Do YYYY')}</div>
+        </div>
+          {
+            bookingData[item].map((element, index) => <TimeSchedule key={index} item={element}/>)
+          }
+      </div>
+          ))}
+      </div>
+    </>
+  );
+}
+}
+const TimeSchedule = ({item}) => (
+  <div className='schedule__info-wrpr'>
+  <div >{moment(item.time).format('h:mm')}</div>
+  <div>{item.classType}</div>
+  <div>{item.teacher}</div>
+  <div className='schedule-btns-wrpr'>
+  <Link to="/book/info"><button className='schedule__btn-2'>+</button></Link>
+  <Link to="/book/confirmation" state={{data:item}}><button className='schedule__btn'>BOOK</button></Link>
+  </div>
+  </div>
+)
+
 //     "2022-12-31": [
 //         {
 //             "_id": "63979128e24d85c828096b4b",
@@ -99,35 +129,3 @@ export default function Schedule() {
 //         }
 //     ]
 // }
-
-  return (
-    <>
-      <div>
-        {/* <div>When would you be dancing</div> */}
-        {Object.keys(bookingData).map((item)=>(
-        <div className='schedule'>
-          <div className='schedule__day-wrpr'>
-          <div>{moment(item).format('dddd MMMM Do YYYY')}</div>
-        </div>
-          {
-            bookingData[item].map(element => <TimeSchedule item={element}/>)
-          }
-      </div>
-          ))}
-      </div>
-    </>
-  );
-}
-}
-const TimeSchedule = ({item}) => (
-  <div className='schedule__info-wrpr'>
-  <div >{moment(item.time).format('h:mm')}</div>
-  <div>{item.classType}</div>
-  <div>{item.teacher}</div>
-  <div className='schedule-btns-wrpr'>
-  <Link to="/book/info"><button className='schedule__btn-2'>+</button></Link>
-  <Link to="/book/confirmation" state={{data:item}}><button className='schedule__btn'>BOOK</button></Link>
-  </div>
-  </div>
-)
-

@@ -43,6 +43,7 @@ export default function App() {
    * token is decoded on the server and if valid sends back a user object
    */
   const loadProfile = (jwtToken) => {
+
     axios
       .get('http://localhost:8080/user/login', {
         headers: {

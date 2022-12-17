@@ -15,7 +15,7 @@ export default function BuyPassess(props) {
       },
     })
     .then(data => {
-      props.loadProfile()
+
       navigate('/')
     })
     .catch(error => console.log(error));
@@ -30,7 +30,7 @@ export default function BuyPassess(props) {
       {/* <form className='buy-p'> */}
         <div className='buy-p__btn-wrpr'>
           <input className='buy-p__input' type="radio" id="5-passess" name="passess" value="5" onChange={(e)=>setValue(e.target.value)}/>
-          <label for="5"> 5 PASSESS OF 1.5 HOUR CLASS. $100 CND</label>
+          <label htmlFor="5"> 5 PASSESS OF 1.5 HOUR CLASS. $100 CND</label>
         {/* <br /> */}
         </div>
         <div className='buy-p__btn-wrpr'>
@@ -38,7 +38,7 @@ export default function BuyPassess(props) {
             <input className='buy-p__input' type="radio" id="10-passess" name="passess" value="10" onChange={(e)=>setValue(e.target.value)}/>
           {/* </div> */}
           {/* <div className='buy-p__label-wrpr'> */}
-            <label for="10"> 10 PASSESS OF 1.5 HOUR CLASS. $200 CND</label>
+            <label htmlFor="10"> 10 PASSESS OF 1.5 HOUR CLASS. $200 CND</label>
          {/* </div> */}
         </div>
         <div className='buy-p__total'>

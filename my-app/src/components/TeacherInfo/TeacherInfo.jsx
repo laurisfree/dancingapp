@@ -38,7 +38,6 @@ export default function TeacherInfo() {
         {/* Info of the teacher */}
         <div className='teacher-info'>
           <div className='teacher-info__main-wrpr'>
-            {/* <Link to="/book"><button>BACK</button></Link> */}
             <p>MARY SHELLBY</p>
           </div>
           <div className='teacher-info__text-wrpr'>
