@@ -3,6 +3,10 @@ const cors = require('cors');
 const app = express();
 const bookingRoutes = require('./routes/booking')
 const userRoutes = require('./routes/users')
+const commentsRoutes = require('./routes/comments')
+
+
+
 require('dotenv').config()
 
 // JOT TOKEN
@@ -12,7 +16,8 @@ require('dotenv').config()
 
 // 
 
-const connectDB = require('./db/mongoose')
+const connectDB = require('./db/mongoose');
+const { default: axios } = require('axios');
 connectDB()
 
 const PORT = 8080
@@ -27,9 +32,9 @@ app.use(( req, res, next )=>{
 
 app.use('/booking',bookingRoutes)
 app.use('/user',userRoutes)
+app.use('/comment',commentsRoutes)
+
 
 app.listen(PORT, function () {
 	console.log(`server running at http://localhost:${PORT}`);
 });
-
-
