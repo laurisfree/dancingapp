@@ -44,9 +44,13 @@ const CommentForm = ({ getUserComments, comment, setComment, imageUrl, setImageU
     };
     return (
         <>
-            <input type="text" ref = {commentRef} value={comment} placeholder="Add a comment" onChange={(e) => {setComment(e.target.value)}}/>
-            <input type="text" value={imageUrl} placeholder="Add an image" onChange={(e) => {setImageUrl(e.target.value)}}/>
-            <button type="submit" onClick={ onSubmitHandler}>{ !editId ? "Post Comment" : "Edit Comment" }</button>
+            <p className='comment-form'>This space is for you to add notes to track your progress or reminders of the choreos learnt in class</p>
+            <p className='comment-form__subheader'>WRITE YOUR NOTE</p>
+            <div className='comment-form__wrpr'>
+              <input className='comment-form__text' type="text" ref = {commentRef} value={comment} placeholder="Write a note for yourself" onChange={(e) => {setComment(e.target.value)}}/>
+              <input className='comment-form__url' type="text" value={imageUrl} placeholder="Upload a url form an image" onChange={(e) => {setImageUrl(e.target.value)}}/>
+              <button className='comment-form__btn' type="submit" onClick={ onSubmitHandler}>{ !editId ? "POST COMMENT" : "Edit Comment" }</button>
+            </div>
         </>
     )
 }

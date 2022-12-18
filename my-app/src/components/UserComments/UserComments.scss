@@ -1,3 +1,52 @@
 @use '../../styles/partials/variables' as *;
 @use '../../styles/partials/mixins' as *;
 @use '../../styles/partials/typography' as *;
+
+
+.user-comments {
+
+    // display: flex;
+
+    &__text {
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    &__img {
+
+        @include tablet {
+            width: 500px;
+        }
+    }
+
+
+    &__btn1 {
+        height: 3.125rem;
+        // width: 100%;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        background-color: #8bd3dd;
+        border: none;
+        // margin-top: 5rem;
+        color: black;
+        font-weight: 700;
+        border-radius: 0.25rem;
+        margin-bottom: 2rem;
+        margin-right: 2rem;
+    }
+
+    &__btn2 {
+        height: 3.125rem;
+        // width: 100%;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        background-color: #8bd3dd;
+        border: none;
+        // margin-top: 5rem;
+        color: black;
+        font-weight: 700;
+        border-radius: 0.25rem;
+        margin-bottom: 2rem;
+    }
+    
+}

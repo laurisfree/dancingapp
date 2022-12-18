@@ -31,15 +31,15 @@ const UserComments = ({ getUserComments, comments, imageUrl, comment, setComment
 
     return (
       <>
-        <div>
+        <div className='user-comments'>
             {
                 comments.map((comment) => (
                     <div key={comment._id}>
-                      <div>{comment.comment}</div>
-                      <div> <img src={comment.imageUrl} alt="alternate name" width="500px"/> </div>
+                      <div className='user-comments__text'>{comment.comment}</div>
+                      <div> <img className='user-comments__img' src={comment.imageUrl} alt="ballerina photo"/> </div>
                       <p>{`Posted on ${moment(comment.createdAt).format("dddd MMMM Do YYYY")}`}</p>
-                      <button onClick={() => onEditHandler(comment._id, comment.comment, comment.imageUrl)}>edit</button>
-                      <button onClick={() => onDeleteHandler(comment._id)}>delete</button>
+                      <button className='user-comments__btn1' onClick={() => onEditHandler(comment._id, comment.comment, comment.imageUrl)}>EDIT</button>
+                      <button className='user-comments__btn2' onClick={() => onDeleteHandler(comment._id)}>DELETE</button>
                     </div>
                 ))
             }

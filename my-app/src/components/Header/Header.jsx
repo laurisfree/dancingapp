@@ -30,7 +30,7 @@ export default function Header() {
                     </div>
                     <div className="header-main__nav">
                         <Link to="/dancer">
-                            <li className="header-main__nav-li">COMMENTS</li>
+                            <li className="header-main__nav-li">NOTES</li>
                         </Link>
                     </div>
 
