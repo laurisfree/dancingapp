@@ -2,6 +2,13 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+# dancingapp
+
+Booking app for ballet studios, the user can book clasess, buy pasess and add private notes to track her progres or any remider of the clasess.
+
+# Clone this repository
+$ git clone https://github.com/laursifree
+ 
 ## Available Scripts
 
 In the project directory, you can run:
